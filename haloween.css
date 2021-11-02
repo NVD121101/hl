@@ -1,0 +1,93 @@
+body{
+    background-color: #191a2e;
+    height: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h1{
+      position: absolute;
+      top : 0;
+      color: #fff;
+      animation: one 2s linear infinite alternate;
+  }
+  .one{
+    margin: auto;
+    width: 150px;
+    height: 200px;
+    background-color: white;
+    position: relative;
+    border-radius: 100rem 100rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: ghost 3s infinite linear alternate;
+  }
+  .one:before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 0;
+    left: 0;
+    transform: translatey(50%);
+    border-radius: 0 0 100rem 100rem;
+    background-color: white;
+    box-shadow: 30px 0 0 0 white, 60px 0 0 0 white,90px 0 0 0 white, 120px 0 0 0 white;
+  }
+  .one:after{
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    position: absolute; 
+    left: -13px;
+    border-radius: 100rem;
+    box-shadow: 150px 0 0 0 white;
+  }
+  
+  .two{
+    width: 100%;
+    max-width: 60%;
+    height: 90px;
+    position: relative;
+  }
+  .three{
+    width: 30px;
+    height: 30px;
+    background-color: #191a2e;
+    border-radius: 100rem;
+    box-shadow: 60px 0 0 0 #191a2e;
+  }
+  .four{
+    width: 100%;
+    max-width: 80%;
+    height: 30px;
+    background-color: #191a2e;
+    position: relative;
+    margin: 30px auto 0;
+    border-bottom-left-radius: 100rem;
+    border-bottom-right-radius: 100rem;
+  }
+  .four:after{
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    position: absolute;
+    left: 15px;
+  }
+  @keyframes ghost{
+      from{
+          opacity: 0;
+          transform: translateY(-50%);
+      }
+      to{
+          opacity: 1;
+          transform: translateY(100%);
+      }
+  }
+  @keyframes one{
+      from { opacity:0.2}
+      to {opacity: 1;}
+  }
